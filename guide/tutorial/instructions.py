@@ -1,11 +1,16 @@
-from sonolus.script.instruction import instruction_icons, instructions
+from sonolus.script.instruction import (
+    StandardInstruction,
+    StandardInstructionIcon,
+    instruction_icons,
+    instructions,
+)
 
 
 @instructions
 class Instructions:
-    pass
+    tap: StandardInstruction.TAP
 
 
 @instruction_icons
 class InstructionIcons:
-    pass
+    hand: StandardInstructionIcon.HAND

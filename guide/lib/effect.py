@@ -1,6 +1,9 @@
-from sonolus.script.effect import effects
+from sonolus.script.effect import StandardEffect, effects
 
 
 @effects
 class Effects:
-    pass
+    stage: StandardEffect.STAGE
+    perfect: StandardEffect.PERFECT
+    great: StandardEffect.GREAT
+    good: StandardEffect.GOOD
