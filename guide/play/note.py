@@ -2,6 +2,7 @@ from sonolus.script.archetype import (
     PlayArchetype,
     StandardImport,
     callback,
+    entity_data,
     entity_memory,
 )
 from sonolus.script.bucket import Judgment
@@ -25,9 +26,9 @@ class Note(PlayArchetype):
     is_scored = True
 
     beat: StandardImport.BEAT
-    target_time: float = entity_memory()
-    visual_time: Interval = entity_memory()
-    spawn_time: float = entity_memory()
+    target_time: float = entity_data()
+    visual_time: Interval = entity_data()
+    spawn_time: float = entity_data()
     input_time: Interval = entity_memory()
 
     def preprocess(self):

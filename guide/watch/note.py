@@ -1,4 +1,4 @@
-from sonolus.script.archetype import StandardImport, WatchArchetype, entity_memory
+from sonolus.script.archetype import StandardImport, WatchArchetype, entity_data
 from sonolus.script.bucket import Judgment
 from sonolus.script.interval import Interval
 from sonolus.script.quad import Rect
@@ -22,8 +22,8 @@ class WatchNote(WatchArchetype):
     judgment: StandardImport.JUDGMENT
     accuracy: StandardImport.ACCURACY
 
-    target_time: float = entity_memory()
-    visual_time: Interval = entity_memory()
+    target_time: float = entity_data()
+    visual_time: Interval = entity_data()
 
     def preprocess(self):
         self.target_time = beat_to_time(self.beat)
