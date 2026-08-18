@@ -22,4 +22,4 @@ class WatchStage(WatchArchetype):
             t=1 - Config.note_radius / 4,
             b=1 + Config.note_radius / 4,
         )
-        Skin.judge_line.draw(layout, z=(0,), a=1)
+        Skin.judge_line.draw(layout, z=0, a=1)

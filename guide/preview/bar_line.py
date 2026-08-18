@@ -21,7 +21,7 @@ class PreviewBpmChange(PreviewArchetype):
         Chart.duration = max(Chart.duration, beat_to_time(self.beat))
 
     def render(self):
-        draw_line(Skin.bpm_change_line, self.beat, a=0.5)
+        draw_line(Skin.bpm_change_line, self.beat, order=1, a=0.5)
         print_at_time(
             self.bpm,
             beat_to_time(self.beat),
@@ -42,7 +42,7 @@ class PreviewTimescaleChange(PreviewArchetype):
         Chart.duration = max(Chart.duration, beat_to_time(self.beat))
 
     def render(self):
-        draw_line(Skin.timescale_change_line, self.beat, a=0.5)
+        draw_line(Skin.timescale_change_line, self.beat, order=2, a=0.5)
         print_at_time(
             self.timescale,
             beat_to_time(self.beat),

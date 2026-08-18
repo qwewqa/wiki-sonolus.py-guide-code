@@ -45,13 +45,13 @@ class PreviewStage(PreviewArchetype):
                 Vec2(x, 0)
             )
 
-            Skin.stage_middle.draw(middle, z=(0,))
-            Skin.stage_left_border.draw(left_border, z=(0,))
-            Skin.stage_right_border.draw(right_border, z=(0,))
+            Skin.stage_middle.draw(middle, z=0)
+            Skin.stage_left_border.draw(left_border, z=0)
+            Skin.stage_right_border.draw(right_border, z=0)
 
     def render_beats(self):
         for beat in range(floor(Chart.beats) + 1):
-            draw_line(Skin.beat_line, beat, a=0.25 if beat % 4 == 0 else 0.125)
+            draw_line(Skin.beat_line, beat, order=0, a=0.25 if beat % 4 == 0 else 0.125)
 
     def print_times(self):
         for time in range(1, floor(Chart.duration) + 1):

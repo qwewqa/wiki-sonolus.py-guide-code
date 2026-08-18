@@ -21,7 +21,7 @@ PAUSE_DURATION = 1
 def draw_note(y: float, scale: float = 1, alpha: float = 1):
     size = 2 * Config.note_radius * scale
     layout = Rect.from_center(Vec2(0, y), Vec2(size, -size))
-    Skin.note.draw(layout, z=(1,), a=alpha)
+    Skin.note.draw(layout, z=1, a=alpha)
 
 
 def draw_intro(elapsed: float):

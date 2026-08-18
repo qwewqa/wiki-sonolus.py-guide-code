@@ -69,7 +69,7 @@ def _get_anchor(position: Vec2):
     return anchor
 
 
-def draw_line(sprite: Sprite, beat: float, a: float = 1):
+def draw_line(sprite: Sprite, beat: float, order: float, a: float = 1):
     position = pos_at_time(beat_to_time(beat))
     layout = Rect.from_center(position, Vec2(3, 0.01))
-    sprite.draw(layout, z=(0,), a=a)
+    sprite.draw(layout, z=(1, order), a=a)

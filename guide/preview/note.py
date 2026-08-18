@@ -26,4 +26,4 @@ class PreviewNote(PreviewArchetype):
             position,
             Vec2(2 * Options.note_size, 2 * Options.note_size * HEIGHT_SCALE),
         )
-        Skin.note.draw(layout, z=(1, -time))
+        Skin.note.draw(layout, z=(2, -time))
