@@ -1,6 +1,6 @@
-from sonolus.script.particle import particles
+from sonolus.script.particle import StandardParticle, particles
 
 
 @particles
 class Particles:
-    pass
+    note: StandardParticle.NOTE_CIRCULAR_TAP_CYAN
