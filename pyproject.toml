@@ -1,0 +1,20 @@
+[project]
+name = "guide"
+version = "0.1.0"
+description = "A Sonolus.py port of the Sonolus.js guide engine"
+readme = "README.md"
+requires-python = ">=3.12.5"
+dependencies = [
+    "sonolus.py~=1.0"
+]
+
+[dependency-groups]
+dev = ["ruff>=0.12"]
+
+[tool.ruff.lint]
+preview = true
+select = ["F", "E", "W", "I", "N", "D", "UP", "YTT", "B", "A", "COM", "C4", "DTZ", "PIE", "PT", "Q", "SLOT", "SIM", "PTH", "PL", "PERF", "FURB", "LOG", "RUF"]
+ignore = ["module-import-not-at-top-of-file", "D1", "missing-trailing-comma", "redefined-loop-name", "bad-dunder-method-name", "no-self-use", "import-outside-top-level", "magic-value-comparison", "PLR09", "if-else-block-instead-of-if-exp", "repeated-append", "stdlib-module-shadowing"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
